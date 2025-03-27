@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <title>EcomEaseSolution</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      crossorigin = "anonymous" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+
+<body>
+
+  <a href="https://wa.me/918502935818" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+  <nav>
+    <div class="menu">
+      <input type="checkbox" id="check">
+      <div class="logo"><a href="#">
+          <img src="./images/logoWidth.png" alt="">
+        </a></div>
+      <ul>
+        <label class="btn cancel" for="check"><i class="fas fa-times"></i></label>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact-Us.html">Contact</a></li>
+        <li><a href="Plan&Offers.html">Plan & Offers</a></li>
+        <a href="Book-Free-Consultation.html"> <button>Book Free Consultation</button></a>
+      </ul>
+      <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>
+    </div>
+    </div>
+  </nav>
+
+
+  <!-- main-banner -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <div class="banner-content" data-aos="fade-right">
+          <h1>Boost Your Business with Creative Designs!</h1>
+          <p>We specialize in Graphic Design, Branding, and Visual Identity to make your business stand out.</p>
+          <ul class="services">
+            <li><i class="fas fa-check"></i>Custom Logo Design</li>
+            <li><i class="fas fa-check"></i>Eye-catching Social Media Graphics</li>
+            <li><i class="fas fa-check"></i>Engaging Marketing Materials</li>
+            <li><i class="fas fa-check"></i> Professional Branding Solutions</li>
+          </ul>
+          <a href="Book-Free-Consultation.html" class="cta-btn">Get a Free Quote</a>
+        </div>
+        <div class="banner-image" data-aos="fade-left">
+          <img src="./images/graphicdesigningkha.png" alt="">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="banner-content">
+          <h1>Grow Your Sales with Smart Digital Marketing!</h1>
+          <p>Our expert strategies help businesses increase visibility, engagement, and revenue.</p>
+          <ul class="services">
+            <li><i class="fas fa-check"></i> SEO & SEM Services</li>
+            <li><i class="fas fa-check"></i> Social Media Marketing</li>
+            <li><i class="fas fa-check"></i> PPC & Google Ads Management</li>
+            <li><i class="fas fa-check"></i> Content & Email Marketing</li>
+          </ul>
+          <a href="Book-Free-Consultation.html" class="cta-btn">Start Marketing Now</a>
+        </div>
+        <div class="banner-image">
+          <img src="./images/3d-illustration-people-working-marketing.png" alt="">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="banner-content">
+          <h1>Expand Your Reach with E-commerce Solutions!</h1>
+          <p>We help manage Amazon accounts, product listings, and marketplace optimization.</p>
+          <ul class="services">
+            <li><i class="fas fa-check"></i> Amazon Store Setup</li>
+            <li><i class="fas fa-check"></i>?Product Listing Optimization</li>
+            <li><i class="fas fa-check"></i>Advertising & Promotions</li>
+            <li><i class="fas fa-check"></i> Sales & Performance Analytics</li>
+          </ul>
+          <a href="Book-Free-Consultation.html" class="cta-btn">Optimize Your Store</a>
+        </div>
+        <div class="banner-image">
+          <img src="./images/communication-flat-icon.png" alt="">
+        </div>
+      </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+
+  <!-- about-section  -->
+
+  <section class="about-section">
+    <div class="container">
+      <h2 data-aos="fade-up">About EcomEaseSolutions</h2>
+      <div class="about-content">
+        <div class="about-image" data-aos="fade-right">
+          <img src="images//190.jpg " alt="About Us">
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <p>At EcomEaseSolutions, we empower your online business with top-notch services. Specializing in eCommerce
+            account management for platforms like Amazon and Flipkart, we ensure your store reaches its full potential.
+            Our digital marketing services enhance your online presence, while our web development team creates
+            user-friendly websites that drive growth.</p>
+          <h3>Ecommerce Account Management</h3>
+          <p>Optimize your Amazon and Flipkart presence for maximum sales and visibility, tailored to your needs.</p>
+          <h3>Digital Marketing Services</h3>
+          <p>Boost visibility, drive traffic, and increase conversions with expert digital marketing strategies, from
+            SEO to PPC.</p>
+          <h3>Web Development Services</h3>
+          <p>Create responsive, user-friendly websites that engage audiences and drive business growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <<!-- service-section -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div id="service" class="container">
+        <div class="row g-5 mb-5">
+          <!-- Before & After Image Section -->
+          <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s">
+            <div class="image-container h-100 rounded" data-aos="zoom-in">
+              <img class="image-overlay" src="./images/overlay.jpg" alt="After Image">
+            </div>
+          </div>
+          <!-- Service Text Section -->
+          <div class="col-lg-7">
+            <div class="section-title mb-5">
+              <h5 class="text-primary-blue text-uppercase fw-bold" data-aos="fade-up">Our Services</h5>
+              <h1 class="display-5 fw-semibold red-text" data-aos="fade-up">We Offer The Best Quality Services</h1>
+            </div>
+            <div class="row g-5">
+              <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s" data-aos="fade-up">
+                <div class="service-img rounded-top overflow-hidden">
+                  <a href="Ecommerce-managment.html"> <img class="img-fluid" src="./images/ecommerce.jpg"
+                      alt="SEO Service">
+                  </a>
+                </div>
+                <div class="service-text bg-light rounded-bottom text-center p-4">
+                  <h5>Ecommerce Account Management</h5>
+                </div>
+              </div>
+              <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s" data-aos="fade-up">
+                <div class="service-img rounded-top overflow-hidden">
+                  <a href="Digital-Marketing.html"><img class="img-fluid" src="./images/digital-marketing.avif"
+                      alt="Social Media Marketing"></a>
+                </div>
+                <div class="service-text bg-light rounded-bottom text-center p-4">
+                  <h5>Digital Marketing</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-7">
+            <div class="row g-5">
+              <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s" data-aos="fade-up">
+                <div class="service-img rounded-top overflow-hidden">
+                  <a href="Web-development.html"> <img class="img-fluid" src="./images/develop.jpg"
+                      alt="Web Development"></a>
+                </div>
+                <div class="service-text bg-light rounded-bottom text-center p-4">
+                  <h5>Web Development</h5>
+                </div>
+              </div>
+              <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s" data-aos="fade-up">
+                <div class="service-img rounded-top overflow-hidden">
+                  <a href="Graphic-Design.html"><img class="img-fluid" src="./images/graphic-designing.jpg"
+                      alt="App Development"></a>
+                </div>
+                <div class="service-text bg-light rounded-bottom text-center p-4">
+                  <h5>Graphic Designing</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Box -->
+          <div class="col-lg-5 service-item wow zoomIn" data-wow-delay="0.9s" data-aos="zoom-in">
+            <div
+              class="contact-box bg-primary-blue rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+              <h3 class="text-white">More On Demand Service</h3>
+              <p class="text-white">We give a great beginning for endless business opportunities.</p>
+              <h2 class="text-white">
+                <a href="tel:+918502935818" style="color: white; text-decoration: none;"> <i
+                    class="fa fa-phone-alt"></i>
+                  +918502935818</a>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Why-choose asss-->
+    <section class="why-choose-us">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <h2>Why Choose Us?</h2>
+          <p>
+            <strong>Ecom Ease Solutions</strong>, established in <strong>2024</strong> with <strong>ISO
+              certification</strong>, is a
+            trusted leader in <strong>ecommerce services, digital marketing, and web development</strong>.
+            With customized strategies and a strong success record, we help businesses grow.
+            <em>Partner with us for guaranteed success and expert solutions.</em>
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/social_14063250 (2).png" alt="Certified Amazon SPN" loading="lazy">
+            <h3>Certified Amazon SPN</h3>
+            <p>We are an official <strong>Amazon Service Provider Network (SPN)</strong>, ensuring reliable and expert
+              ecommerce solutions.</p>
+          </article>
+
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/employee_11924449.png" alt="98.9% Client Retention" loading="lazy">
+            <h3>98.9% Client Retention</h3>
+            <p>Our top-quality services ensure a <strong>high client retention rate</strong>, proving our commitment to
+              excellence.</p>
+          </article>
+
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/rate_7287465.png" alt="Trained and Expert Team" loading="lazy">
+            <h3>Trained and Expert Team</h3>
+            <p>Our <strong>highly skilled team</strong> is trained in the latest industry trends, offering the best
+              solutions for your business.</p>
+          </article>
+
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/quality-control_3712157.png" alt="ISO 9001:2015 Certified Company" loading="lazy">
+            <h3>ISO 9001:2015 Certified Company</h3>
+            <p>We are an <strong>ISO-certified company</strong>, maintaining the highest standards of quality in all our
+              services.</p>
+          </article>
+
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/medal_11869939.png" alt="2+ Years of Experience" loading="lazy">
+            <h3>2+ Years of Experience</h3>
+            <p>With <strong>2+ years of experience</strong>, we have successfully served numerous businesses in
+              ecommerce
+              and digital marketing.</p>
+          </article>
+
+          <article class="feature-box" data-aos="fade-up">
+            <img src="./images/service_15391945.png" alt="24x7 Customer Support" loading="lazy">
+            <h3>24x7 Customer Support</h3>
+            <p>We provide <strong>round-the-clock customer support</strong> to ensure smooth business operations without
+              delays.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="case-study">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Success Stories</h2>
+        <p class="section-subtitle" data-aos="fade-up">See how we transformed businesses with digital marketing!</p>
+
+        <div class="case-study-grid">
+          <div class="case-card" data-aos="fade-right">
+            <div class="case-text">
+              <h3>E-commerce Sales Boost 🚀</h3>
+              <p>We helped XYZ Store grow their online sales by <strong>300%</strong> in just <strong>6 months</strong>
+                with targeted ads & SEO.</p>
+            </div>
+          </div>
+
+          <div class="case-card" data-aos="fade-up">
+            <div class="case-text">
+              <h3>Social Media Domination 📈</h3>
+              <p>Our expert social media strategy increased engagement by <strong>450%</strong> for ABC Brand in just
+                <strong>3 months</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="case-card" data-aos="fade-left">
+            <div class="case-text">
+              <h3>Lead Generation Mastery 🎯</h3>
+              <p>For DEF Agency, we optimized their website & ads, generating <strong>1200+</strong> high-quality leads
+                in
+                5 months!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <div class=" testimonial-container">
+      <h1>
+        TESTIMONIALS
+      </h1>
+  
+      <div class="sliderr ">
+        <div class="big-circle"></div>
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="slidesa">
+          <!-- Slide 1 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  "Excellent service and support. Highly recommend!" </p>
+                <p class="name">
+                  Sourabh Sharma
+                </p>
+                <p class="title">
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  Their content creation and social media expertise have significantly boosted our sales.
+                  EcomEaseSolutions keeps us ahead of the competition.
+                </p>
+                <p class="name">
+                  Rahul Baghel
+                </p>
+                <p class="title"> Owner of FTC
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  “>Ecom Ease Solutions transformed our digital marketing, boosting our online visibility and
+                  engagement. Their team&#39;s knowledge and responsiveness are outstanding ”
+                </p>
+                <p class="name">
+                  Vikram PatelAvinash Kr
+                </p>
+                <p class="title">
+                  CEO of Patel Agri Products
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  “ The web development team at Ecom Ease Solutions exceeded our expectations in creating a stunning,
+                  user-friendly website for our home decor business. The site&#39;s functionality and design have
+                  received countless compliments from our customers. The process was smooth, and the team was responsive
+                  to all our needs and feedback.</p>
+                <p class="name">
+                  Amit Sharma
+                </p>
+                <p class="title">
+                  Director of Sharma Home Deco
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  Ecom Ease Solutions has taken our digital presence to the next level. The team’s expertise in SEO and
+                  PPC has driven remarkable growth in our online sales. We appreciate their proactive approach and
+                  commitment to our brand’s success. Sneha’s Fashion Hub has never been more visible, thanks to their
+                  efforts </p>
+                <p class="name">
+                  Sneha Gupta
+                </p>
+                <p class="title">
+                  Founder of Sneha’s Fashion Hub
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>Our sales have 300% increased, thanks to Dipanshu who managing my account perfectly. Their team
+                  handle everything from listings to ads, allowing us to focus on our core business
+                </p>
+                <p class="name">
+                  Babu Lal Garg
+                </p>
+                <p class="title">
+                  Founder of Giantex Furniture
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="sliders">
+            <div class="testimonial">
+              <div class="img">
+                <img alt="Portrait of Avinash Kr" src="./images/user_9187466.png">
+              </div>
+              <div class="text">
+                <p>
+                  “ Their account management has streamlined our operations and doubled our sales.
+                  EcomEaseSolutions&#39; professionalism and dedication are commendable. ”
+                </p>
+                <p class="name">
+                  Vikash Jain
+                </p>
+                <p class="title">
+                  Owner of FurniLab
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation">
+          <button class="previous" onclick="prevSlide()">
+            ❮
+          </button>
+          <button class="nexts" onclick="nextSlide()">
+            ❯
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form">
+      <div class="col-sm-6" data-aos="fade-right">
+        <div class="faq-section">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+
+          <div class="faq">
+            <div class="question">1. What services do you offer?</div>
+            <div class="answer">We offer website development, digital marketing, SEO, branding, and e-commerce
+              solutions
+              to help businesses grow online.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">2. How can I contact support?</div>
+            <div class="answer">You can reach our support team via email at support@example.com or call us at +91
+              9876543210. We are available 24/7.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">3. Do you provide custom website solutions?</div>
+            <div class="answer">Yes, we build fully customized websites based on your business needs, including UI/UX
+              design, backend development, and SEO optimization.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">4. What are your pricing plans?</div>
+            <div class="answer">Our pricing depends on the complexity of the project. We offer budget-friendly plans
+              starting from ₹10,000 for basic websites. Contact us for a detailed quote.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">5. How long does it take to complete a website?</div>
+            <div class="answer">A simple website takes around 2-3 weeks, while complex websites (e-commerce, portals)
+              may
+              take 1-3 months, depending on features and requirements.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">6. Do you provide SEO services?</div>
+            <div class="answer">Yes, we offer SEO services to improve website ranking on Google, including keyword
+              optimization, content strategy, and technical SEO.</div>
+          </div>
+
+          <div class="faq">
+            <div class="question">7. Do you offer website maintenance and support?</div>
+            <div class="answer">Yes, we provide ongoing website maintenance, security updates, and technical support
+              to
+              keep your website running smoothly.</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6" data-aos="fade-left">
+        <div class="contact-form">
+          <form action="https://formsubmit.co/d9aa3900e0e47154aa4387cfa4b7294a" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://www.google.com//index.html">
+            <h3 class="title">Get CallBack </h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" id="phone" maxlength="10" pattern="[0-9]{10}" required />
+              <label for="phone">Phone</label>
+              <span>Phone</span>
+            </div>
+
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <!-- Business Services -->
+          <div class="footer-col">
+            <h4>Boost Your Business</h4>
+            <p>We specialize in Graphic Design, Branding, and Visual Identity to make your business stand out.</p>
+            <ul class="services-list">
+              <li><i class="fas fa-check-circle"></i> Custom Logo Design</li>
+              <li><i class="fas fa-check-circle"></i> Eye-catching Social Media Graphics</li>
+              <li><i class="fas fa-check-circle"></i> Engaging Marketing Materials</li>
+              <li><i class="fas fa-check-circle"></i> Professional Branding Solutions</li>
+            </ul>
+            <a href="Book-Free-Consultation.html" class="btn">Get a Free Quote</a>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="About.html"><i class="fas fa-chevron-right"></i> About</a></li>
+              <li><a href="Services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+              <li><a href="Contact-Us.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+              <li><a href="Plan&Offers.html"><i class="fas fa-chevron-right"></i> Plan & Offers</a></li>
+            </ul>
+          </div>
+
+
+
+          <!-- Contact Info -->
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><a href="tel:+918502935818"> <i class="fa fa-phone-alt"></i>
+                +918502935818</a></p>
+            <p> <a href="mailto:info@ecomeasesolutions.com"> <i class="fa fa-envelope"></i>
+                info@ecomeasesolutions.com
+              </a></p>
+            <p> <i class="fas fa-map-marker-alt"></i>
+              <a href="https://www.google.com/maps/search/?api=1&query=C-193,+Arawali+Vihar+Colony,+Road+Number+9,+Nearby+Delhi-Ajmer+Expressway+VKI+Area,+Jaipur,+Rajasthan-302039"
+                target="_blank">
+                C-193, Arawali Vihar Colony, Road Number 9, Nearby Delhi-Ajmer Expressway VKI Area, Jaipur,
+                Rajasthan-302039
+              </a>
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=61560511180675&mibextid=LQQJ4d"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="http://twitter.com/EcomESolutions"><i class="fa-brands fa-twitter"></i></a>
+              <a href="http://www.instagram.com/EcomEaseSolutions"><i class="fa-brands fa-instagram"></i></a>
+              <a href="http://linkedin.com/company/EcomEaseSolutions"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Newsletter Subscription -->
+          <div class="footer-col">
+            <h4>Subscribe to Our Newsletter</h4>
+            <p>Stay updated with the latest trends & offers.</p>
+            <form class="subscribe-form" action="https://formsubmit.co/d9aa3900e0e47154aa4387cfa4b7294a" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="www.google.com">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+          <p>© 2025 EcomEaseSolutions. All Rights Reserved. <a href="https://www.techbro24.com/">TechBro24</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+    const inputs = document.querySelectorAll(".input");
+
+      function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+      }
+
+      function blurFunc() {
+        let parent = this.parentNode;
+        if (this.value == "") {
+          parent.classList.remove("focus");
+        }
+      }
+
+      inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+      });
+    </script>
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Animation duration in milliseconds
+        easing: 'ease-in-out', // Animation easing type
+      });
+    </script>
+
+
+</body>
+
+</html>

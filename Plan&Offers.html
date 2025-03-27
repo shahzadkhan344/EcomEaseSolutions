@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <title>EcomEaseSolution</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+  <style>
+    /* Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      margin-top: 100px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tab:hover,
+    .tab.active {
+      background: #00264e;
+    }
+
+    /* Pricing Containers */
+    .pricing-container {
+      display: none;
+      padding: 0px 130px;
+      text-align: center;
+    }
+
+    .pricing-container.active {
+      display: flex;
+    }
+
+    /* Pricing Cards */
+    .pricing-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: 0.3s ease-in-out;
+      border-top: 5px solid #007bff;
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .plan-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .featuress {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .featuress li {
+      padding: 8px 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .featuress li::before {
+      content: "✔";
+      color: green;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .featuress li.disabled::before {
+      content: "✖";
+      color: red;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .banner {
+      height: 0vh;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-container {
+        padding: 0px 20px;
+      }
+
+      .pricing-card {
+        max-width: 100%;
+      }
+
+      .featuress {
+        margin-left: 0;
+      }
+
+      .tabs {
+        flex-direction: column;
+      }
+
+      .pricing-container.active {
+        flex-direction: column;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <input type="checkbox" id="check">
+      <div class="logo"><a href="#">
+          <img src="./images/logoWidth.png" alt="">
+        </a></div>
+      <ul>
+        <label class="btn cancel" for="check"><i class="fas fa-times"></i></label>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact-Us.html">Contact</a></li>
+        <li><a href="Plan&Offers.html">Plan & Offers</a></li>
+        <a href="Book-Free-Consultation.html"> <button>Book Free Consultation</button></a>
+      </ul>
+      <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>
+    </div>
+    </div>
+  </nav>
+
+  <section class="banner">
+    <div class="overlay"></div>
+    <h1 class="titles"></h1>
+    <div class="balloons">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+    </div>
+  </section>
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" onclick="showPricing('amazon')">Amazon Account Management</div>
+    <div class="tab" onclick="showPricing('flipkart')">Flipkart Account Management</div>
+    <div class="tab" onclick="showPricing('jiomart')">JioMart Account Management</div>
+    <div class="tab" onclick="showPricing('meesho')">Meesho Account Management</div>
+  </div>
+
+  <!-- Amazon Plans -->
+  <div id="amazon" class="pricing-container active">
+    <div class="pricing-card basic">
+      <h2 class="plan-name">Basic Plan</h2>
+      <p class="price">₹3000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 50 Product Listing</li>
+        <li>Upto 10 Listings Optimization</li>
+        <li>A+ Content Upto 5 Listings</li>
+        <li>5 Sponsor Ads. Management</li>
+        <li>Upto 20 Buyer Message</li>
+        <li>Upto 5 A-Z Claims Management</li>
+        <li>Upto 5 Negative Feedback</li>
+        <li>Upto 20 Safety Claims</li>
+        <li>Case Logs</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>FBA Registration</li>
+        <li class="disabled">Commission Reconciliation</li>
+        <li class="disabled">Positive Feedback</li>
+        <li class="disabled">Buy Box Activities</li>
+        <li class="disabled">Notification Management</li>
+        <li class="disabled">Report Analysis</li>
+        <li class="disabled">Product Recommendation</li>
+        <li class="disabled">Price Recommendation</li>
+        <li class="disabled">Seller Flex Recommendation</li>
+        <li class="disabled">Prime Tag Enrollment (SFP)</li>
+        <li class="disabled">Infringement File</li>
+      </ul>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="pricing-card standard">
+      <h2 class="plan-name">Standard Plan</h2>
+      <p class="price">₹5000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 100 Product Listing</li>
+        <li>Upto 25 Listings Optimization</li>
+        <li>A+ Content Upto 15 Listings</li>
+        <li>Sponsor Ads. Management</li>
+        <li>10x Sales Boost</li>
+        <li>Upto 100 Buyer Message</li>
+        <li>Upto 20 A-Z Claims Management</li>
+        <li>Upto 10 Negative Feedback</li>
+        <li>Upto 50 Safety Claims</li>
+        <li>Case Logs</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>FBA Registration</li>
+        <li>Upto 5 Positive Feedback</li>
+        <li>Buy Box Activities</li>
+        <li>Notification Management</li>
+        <li>Report Analysis</li>
+        <li>Commission Reconciliations</li>
+        <li class="disabled">Product Recommendation</li>
+        <li class="disabled">Price Recommendation</li>
+        <li class="disabled">Seller Flex Recommendation</li>
+        <li class="disabled">Prime Tag Enrollment (SFP)</li>
+        <li class="disabled">Infringement File</li>
+      </ul>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="pricing-card premium">
+      <h2 class="plan-name">Premium Plan</h2>
+      <p class="price">₹8000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 200 Product Listings</li>
+        <li>Upto 50 Listings Optimization</li>
+        <li>A+ Content Upto 30 Listings</li>
+        <li>Sponsor Ads. Management</li>
+        <li>30x Sales Boost</li>
+        <li>Unlimited Buyer Message</li>
+        <li>Unlimited Claims Management</li>
+        <li>Unlimited Negative Feedback Removal</li>
+        <li>Unlimited Safety Claims</li>
+        <li>Case Logs</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>FBA Registration</li>
+        <li>Unlimited Positive Feedback</li>
+        <li>Buy Box Activities</li>
+        <li>Notification Management</li>
+        <li>Report Analysis</li>
+        <li>Commission Reconciliations</li>
+        <li>Product Recommendation</li>
+        <li>Price Recommendation</li>
+        <li>Seller Flex Recommendation</li>
+        <li>Prime Tag Enrollment (SFP)</li>
+        <li>Infringement File</li>
+      </ul>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Flipkart Plans -->
+  <div id="flipkart" class="pricing-container">
+    <div class="pricing-card basic">
+      <h2 class="plan-name">Basic Plan</h2>
+      <p class="price">₹2000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 50 Product Listing</li>
+        <li>Upto 5 Sponsor Ads Management</li>
+        <li>Upto 5 Negative Feedback Removal</li>
+        <li>Upto 20 Safety Claims</li>
+        <li>Report Analysis - Monthly</li>
+        <li>Business Report</li>
+        <li>Return Report</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>Upto 20 Infringement File</li>
+        <li class="disabled">Notification Management</li>
+        <li class="disabled">Payment Report</li>
+        <li class="disabled">Other Report</li>
+        <li class="disabled">Reconciliation Report</li>
+      </ul>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="pricing-card standard">
+      <h2 class="plan-name">Standard Plan</h2>
+      <p class="price">₹4000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 100 Product Listing</li>
+        <li>Upto 15 Sponsor Ads Management</li>
+        <li>Upto 10 Negative Feedback Removal</li>
+        <li>Upto 35 Safety Claims</li>
+        <li>Report Analysis - Monthly</li>
+        <li>Business Report</li>
+        <li>Return Report</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>Upto 35 Infringement File</li>
+        <li>Notification Management</li>
+        <li>Payment Report</li>
+        <li>Other Report</li>
+        <li class="disabled">Reconciliation Report</li>
+      </ul>
+
+      <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="pricing-card premium">
+      <h2 class="plan-name">Premium Plan</h2>
+      <p class="price">₹6000 +GST</p>
+      <ul class="featuress">
+        <li>Upto 200 Product Listing</li>
+        <li>Upto 30 Sponsor Ads Management</li>
+        <li>Upto 20 Negative Feedback Removal</li>
+        <li>Upto 50 Safety Claims</li>
+        <li>Report Analysis - Weekly</li>
+        <li>Business Report</li>
+        <li>Return Report</li>
+        <li>Category Approval</li>
+        <li>Brand Registry</li>
+        <li>Upto 50 Infringement File</li>
+        <li>Notification Management</li>
+        <li>Payment Report</li>
+        <li>Other Report</li>
+        <li>Reconciliation Report</li>
+      </ul>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </div>
+    <!-- JioMart Plans -->
+    <div id="jiomart" class="pricing-container">  
+        <div class="pricing-card basic">
+          <h2 class="plan-name">Basic Plan</h2>
+          <p class="price">₹2000 +GST</p>
+          <ul class="featuress">
+            <li>Upto 50 Product Listing</li>
+            <li>Upto 5 Sponsor Ads Management</li>
+            <li>Upto 5 Negative Feedback Removal</li>
+            <li>Upto 20 Safety Claims</li>
+            <li>Report Analysis - Monthly</li>
+            <li>Business Report</li>
+            <li>Return Report</li>
+            <li>Category Approval</li>
+            <li>Brand Registry</li>
+            <li>Upto 20 Infringement File</li>
+            <li class="disabled">Notification Management</li>
+            <li class="disabled">Payment Report</li>
+            <li class="disabled">Other Report</li>
+            <li class="disabled">Reconciliation Report</li>
+          </ul>
+    
+          <a href="#" class="btn">Get Started</a>
+        </div>
+    
+        <div class="pricing-card standard">
+          <h2 class="plan-name">Standard Plan</h2>
+          <p class="price">₹4000 +GST</p>
+          <ul class="featuress">
+            <li>Upto 100 Product Listing</li>
+            <li>Upto 15 Sponsor Ads Management</li>
+            <li>Upto 10 Negative Feedback Removal</li>
+            <li>Upto 35 Safety Claims</li>
+            <li>Report Analysis - Monthly</li>
+            <li>Business Report</li>
+            <li>Return Report</li>
+            <li>Category Approval</li>
+            <li>Brand Registry</li>
+            <li>Upto 35 Infringement File</li>
+            <li>Notification Management</li>
+            <li>Payment Report</li>
+            <li>Other Report</li>
+            <li class="disabled">Reconciliation Report</li>
+          </ul>
+    
+          <a href="#" class="btn">Get Started</a>
+        </div>
+    
+        <div class="pricing-card premium">
+          <h2 class="plan-name">Premium Plan</h2>
+          <p class="price">₹6000 +GST</p>
+          <ul class="featuress">
+            <li>Upto 200 Product Listing</li>
+            <li>Upto 30 Sponsor Ads Management</li>
+            <li>Upto 20 Negative Feedback Removal</li>
+            <li>Upto 50 Safety Claims</li>
+            <li>Report Analysis - Weekly</li>
+            <li>Business Report</li>
+            <li>Return Report</li>
+            <li>Category Approval</li>
+            <li>Brand Registry</li>
+            <li>Upto 50 Infringement File</li>
+            <li>Notification Management</li>
+            <li>Payment Report</li>
+            <li>Other Report</li>
+            <li>Reconciliation Report</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
+
+    <!-- Meesho Plans -->
+    <div id="meesho" class="pricing-container">
+        <div class="pricing-card basic">
+          <h2 class="plan-name">Basic Plan</h2>
+          <p class="price">₹2500 +GST</p>
+          <ul class="featuress">
+              <li>Upto 100 Product Listing</li>
+              <li>Upto 5 Sponsor Ads Management</li>
+              <li>Upto 20 Safety Claims</li>
+              <li>Report Analysis - Monthly</li>
+              <li>Business Report</li>
+              <li>Return Report</li>
+              <li>Upto 2 Promotions</li>
+              <li>Brand Registry</li>
+              <li class="disabled">Brand Protection</li>
+              <li class="disabled">Store Creations</li>
+              <li class="disabled">Payment Report</li>
+              <li class="disabled">Other Report</li>
+              <li class="disabled">Reconciliation Report</li>
+          </ul>
+          
+    
+          <a href="#" class="btn">Get Started</a>
+        </div>
+    
+        <div class="pricing-card standard">
+          <h2 class="plan-name">Standard Plan</h2>
+          <p class="price">₹4000 +GST</p>
+          <ul class="featuress">
+            <li>Upto 150 Product Listing</li>
+            <li>Upto 10 Sponsor Ads Management</li>
+            <li>Upto 35 Safety Claims</li>
+            <li>Report Analysis - Fortnightly</li>
+            <li>Business Report</li>
+            <li>Return Report</li>
+            <li>Upto 4 Promotions</li>
+            <li>Brand Registry</li>
+            <li>Brand Protection</li>
+            <li>Store Creations</li>
+            <li>Payment Report</li>
+            <li>Other Report</li>
+            <li class="disabled">Reconciliation Report</li>
+        </ul>
+        
+    
+          <a href="#" class="btn">Get Started</a>
+        </div>
+    
+        <div class="pricing-card premium">
+          <h2 class="plan-name">Premium Plan</h2>
+          <p class="price">₹6000 +GST</p>
+          <ul class="featuress">
+            <li>Upto 250 Product Listing</li>
+            <li>Unlimited Sponsor Ads Management</li>
+            <li>Unlimited Safety Claims</li>
+            <li>Report Analysis - Weekly</li>
+            <li>Business Report</li>
+            <li>Return Report</li>
+            <li>Upto 6 Promotions</li>
+            <li>Brand Registry</li>
+            <li>Brand Protection</li>
+            <li>Store Creations</li>
+            <li>Payment Report</li>
+            <li>Other Report</li>
+            <li>Reconciliation Report</li>
+        </ul>
+        
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-row">
+            <!-- Business Services -->
+            <div class="footer-col">
+              <h4>Boost Your Business</h4>
+              <p>We specialize in Graphic Design, Branding, and Visual Identity to make your business stand out.</p>
+              <ul class="services-list">
+                <li><i class="fas fa-check-circle"></i> Custom Logo Design</li>
+                <li><i class="fas fa-check-circle"></i> Eye-catching Social Media Graphics</li>
+                <li><i class="fas fa-check-circle"></i> Engaging Marketing Materials</li>
+                <li><i class="fas fa-check-circle"></i> Professional Branding Solutions</li>
+              </ul>
+              <a href="Book-Free-Consultation.html" class="btn">Get a Free Quote</a>
+            </div>
+  
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="About.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                <li><a href="Services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="Contact-Us.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="Plan&Offers.html"><i class="fas fa-chevron-right"></i> Plan & Offers</a></li>
+              </ul>
+            </div>
+  
+  
+  
+            <!-- Contact Info -->
+            <div class="footer-col">
+              <h4>Contact Us</h4>
+              <p><i class="fas fa-phone-alt"></i> +918502935818</p>
+              <p><i class="fas fa-envelope"></i> info@ecomeasesolutions.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> C-193, Arawali Vihar Colony, Road Number 9, Nearby Delhi-Ajmer Expressway VKI Area, Jaipur, Rajasthan-302039</p>
+              <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61560511180675&mibextid=LQQJ4d"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="http://twitter.com/EcomESolutions"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://www.instagram.com/EcomEaseSolutions"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://linkedin.com/company/EcomEaseSolutions"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <!-- Newsletter Subscription -->
+            <div class="footer-col">
+              <h4>Subscribe to Our Newsletter</h4>
+              <p>Stay updated with the latest trends & offers.</p>
+              <form class="subscribe-form" action="https://formsubmit.co/d9aa3900e0e47154aa4387cfa4b7294a" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                              <input type="hidden" name="_next"
+                                  value="www.google.com">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              </form>
+            </div>
+          </div>
+  
+          <!-- Bottom Footer -->
+          <div class="footer-bottom">
+            <p>© 2025 EcomEaseSolutions. All Rights Reserved. <a href="https://www.techbro24.com/">TechBro24</a></p>
+          </div>
+        </div>
+      </footer>
+    <!-- JavaScript -->
+    <script>
+      function showPricing(id) {
+        // Hide all pricing sections
+        document.querySelectorAll('.pricing-container').forEach(container => {
+          container.classList.remove('active');
+        });
+
+        // Show the selected section
+        document.getElementById(id).classList.add('active');
+
+        // Update active tab
+        document.querySelectorAll('.tab').forEach(tab => {
+          tab.classList.remove('active');
+        });
+        document.querySelector(`[onclick="showPricing('${id}')"]`).classList.add('active');
+      }
+    </script>
+
+      <!-- AOS JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 800, // Animation duration in milliseconds
+          easing: 'ease-in-out', // Animation easing type
+        });
+      </script>
+</body>
+
+</html>
