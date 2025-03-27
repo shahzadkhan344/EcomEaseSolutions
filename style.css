@@ -50,6 +50,7 @@
 
 body {
   background: #ecf0f3;
+  overflow-x: hidden;
 }
 
 nav {
