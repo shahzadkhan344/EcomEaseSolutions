@@ -45,9 +45,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 
 body {
@@ -368,6 +366,7 @@ nav label.cancel {
 
   .banner-content {
     padding: 20px;
+    margin-top: 60px;
   }
 
   .banner-content h1 {
