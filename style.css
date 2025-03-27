@@ -48,7 +48,7 @@
 
 
 
-body {
+body, html {
   background: #ecf0f3;
   overflow-x: hidden;
 }
