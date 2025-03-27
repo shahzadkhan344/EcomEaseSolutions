@@ -47,12 +47,20 @@
 
 
 
-
 body, html {
   background: #ecf0f3;
   overflow-x: hidden;
+  min-width: 100%;
 }
 
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  overflow-x: hidden;
+}
 nav {
   width: 100%;
   padding: 12px 0;
