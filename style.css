@@ -38,6 +38,7 @@
 }
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -46,11 +47,29 @@
   font-family: 'Poppins', sans-serif;
 }
 
+ body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+.main-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+[data-aos] {
+  overflow: hidden;
+  will-change: transform;
+}
+
+[data-aos].aos-animate {
+  transform: none !important;
+  max-width: 100vw;
+}
 
 
 body {
   background: #ecf0f3;
-  overflow-x: hidden;
   min-width: 100%;
 }
 
